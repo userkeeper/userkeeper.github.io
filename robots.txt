@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Be explicit for major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+Sitemap: https://userkeeper.help/sitemap.xml
