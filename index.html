@@ -334,6 +334,43 @@
   /* SR-only for SEO h1 */
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+  /* "Why this matters" emotional intro in About panel */
+  .why-block{
+    margin:0 0 22px;padding:18px 20px;
+    background:linear-gradient(135deg,rgba(255,59,48,.10),rgba(255,138,28,.06));
+    border:1px solid rgba(255,59,48,.22);
+    border-radius:14px;
+  }
+  .why-line{margin:0;font-size:17px;line-height:1.55;color:#f1f3f7;letter-spacing:-.005em}
+  .why-line b{color:#ff9d4a;font-weight:800}
+  @media (max-width:560px){.why-line{font-size:15px}}
+
+  /* Support-panel sections (Donate / Invest / Media) */
+  .ps-section{padding:22px 0;border-top:1px solid var(--line)}
+  .ps-section:first-of-type{border-top:none;padding-top:4px}
+  .ps-h{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:800;margin:0 0 14px;letter-spacing:-.01em}
+  .ps-num{
+    display:inline-grid;place-items:center;
+    width:28px;height:28px;border-radius:8px;
+    background:rgba(255,255,255,.06);color:#fff;
+    font-size:12px;font-weight:800;flex-shrink:0;
+  }
+  .ps-section.s-donate  .ps-num{background:rgba(255,138,28,.18);color:#ffa54a}
+  .ps-section.s-invest  .ps-num{background:rgba(255,59,48,.18);color:#ff8e85}
+  .ps-section.s-media   .ps-num{background:rgba(59,130,246,.18);color:#80b3ff}
+  .ps-section p{margin:0 0 12px}
+  .ps-section p:last-child{margin-bottom:0}
+
+  /* impact bullets ($10 = ...) */
+  .impact{list-style:none;padding:0;margin:14px 0 18px;display:flex;flex-direction:column;gap:8px}
+  .impact li{
+    padding:11px 14px;background:rgba(255,255,255,.03);
+    border:1px solid var(--line);border-radius:10px;
+    font-size:14px;line-height:1.4;color:#cfd5dc;
+    display:flex;gap:14px;align-items:baseline;
+  }
+  .impact b{color:#fff;font-weight:800;min-width:72px;font-variant-numeric:tabular-nums}
+
   /* Roadmap list in panel */
   .rm{margin-top:12px;display:flex;flex-direction:column;gap:10px}
   .rm-row{
@@ -573,6 +610,14 @@
     <button class="panel-close" data-close>×</button>
   </div>
   <div class="panel-body">
+    <div class="why-block">
+      <p class="why-line">
+        <span data-lang="ru" data-nosnippet>112 знает, <b>где</b> ты — но не знает, <b>кто</b> ты. Близкие знают, <b>кто</b> ты — но не знают, <b>где</b>. UserKeeper — мост между ними. Один тап: GPS, медкарта и сотни людей рядом, готовых помочь.</span>
+        <span data-lang="en" class="show">112 knows <b>where</b> you are — but not <b>who</b>. The people who love you know <b>who</b> you are — but not <b>where</b>. UserKeeper is the bridge. One tap: GPS, medical card, and hundreds of people nearby ready to help.</span>
+        <span data-lang="ge" data-nosnippet>112-მა იცის, <b>სად</b> ხარ — მაგრამ არ იცის, <b>ვინ</b> ხარ. ახლობლებმა იციან, <b>ვინ</b> ხარ — მაგრამ არა <b>სად</b>. UserKeeper არის ხიდი მათ შორის. ერთი დაჭერა: GPS, სამედიცინო ბარათი და ასობით ადამიანი ახლოს, მზად დასახმარებლად.</span>
+      </p>
+    </div>
+
     <p>
       <span data-lang="ru" data-nosnippet><strong>UserKeeper</strong> — приложение экстренной безопасности и координации поиска людей. Одна кнопка SOS отправляет GPS-координаты и медкарту всем, кто рядом и может помочь, и координирует спасательную операцию в реальном времени.</span>
       <span data-lang="en" class="show"><strong>UserKeeper</strong> is an emergency safety and search-coordination app. One SOS button sends GPS and your medical card to everyone nearby who can help, and coordinates the rescue in real time.</span>
@@ -763,39 +808,115 @@
 <div class="panel" id="p-support" role="dialog" aria-modal="true">
   <div class="panel-head">
     <div class="ttl"><span class="tag b"></span>
-      <span data-lang="ru" data-nosnippet>Поддержать в крипте</span>
-      <span data-lang="en" class="show">Support with crypto</span>
-      <span data-lang="ge" data-nosnippet>დახმარება კრიპტოთი</span>
+      <span data-lang="ru" data-nosnippet>Поддержать UserKeeper</span>
+      <span data-lang="en" class="show">Support UserKeeper</span>
+      <span data-lang="ge" data-nosnippet>UserKeeper-ის მხარდაჭერა</span>
     </div>
     <button class="panel-close" data-close>×</button>
   </div>
   <div class="panel-body">
-    <p>
-      <span data-lang="ru" data-nosnippet>Каждый донат идёт на разработку нативных iOS и Android, инфраструктуру и пилот с экстренными службами Грузии.</span>
-      <span data-lang="en" class="show">Every donation goes to native iOS and Android development, infrastructure, and a pilot with Georgia's emergency services.</span>
-      <span data-lang="ge" data-nosnippet>ყოველი დონაცია ხმარდება ნატივი iOS-ისა და Android-ის შემუშავებას, ინფრასტრუქტურასა და საქართველოს გადაუდებელი სამსახურების პილოტს.</span>
-    </p>
 
-    <div class="wallets">
-      <div class="wallet">
-        <div class="wal-ic btc">₿</div>
-        <div class="wal-info"><b>Bitcoin (BTC)</b><div class="wal-addr" id="addr-btc">bc1qly65zeqwuu9jppevgn50pev4588h8kpf2ltx6d</div></div>
-        <button class="copy-btn" data-copy="addr-btc"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+    <!-- ===== SECTION 1: DONATE ===== -->
+    <div class="ps-section s-donate">
+      <h3 class="ps-h"><span class="ps-num">01</span>
+        <span data-lang="ru" data-nosnippet>Донат в крипте</span>
+        <span data-lang="en" class="show">Donate in crypto</span>
+        <span data-lang="ge" data-nosnippet>დონაცია კრიპტოთი</span>
+      </h3>
+      <p>
+        <span data-lang="ru" data-nosnippet>Фаундер один, без зарплаты до seed. <strong>100%</strong> донатов идёт в код, серверы и B2G-пилот с экстренными службами Грузии. Никаких накладных, никаких посредников.</span>
+        <span data-lang="en" class="show">Solo founder, no salary until seed. <strong>100%</strong> of every donation goes into code, servers, and the B2G pilot with Georgia's emergency services. Zero overhead, no middlemen.</span>
+        <span data-lang="ge" data-nosnippet>ერთი დამფუძნებელი, ხელფასის გარეშე seed-მდე. დონაციების <strong>100%</strong> ხმარდება კოდს, სერვერებს და B2G-პილოტს საქართველოს გადაუდებელ სამსახურებთან. ნულოვანი ზედნადები, შუამავლების გარეშე.</span>
+      </p>
+      <ul class="impact">
+        <li><b>$10</b><span><span data-lang="ru" data-nosnippet>= один час разработки нативной фичи</span><span data-lang="en" class="show">= one hour of native development</span><span data-lang="ge" data-nosnippet>= ერთი საათი ნატივი დეველოპმენტი</span></span></li>
+        <li><b>$200</b><span><span data-lang="ru" data-nosnippet>= неделя серверов, базы и API</span><span data-lang="en" class="show">= a week of servers, database and API</span><span data-lang="ge" data-nosnippet>= კვირა სერვერები, ბაზა და API</span></span></li>
+        <li><b>$2 000</b><span><span data-lang="ru" data-nosnippet>= одна готовая фича в проде для всех пользователей</span><span data-lang="en" class="show">= one complete feature shipped to all users</span><span data-lang="ge" data-nosnippet>= ერთი მზა ფიჩა პროდუქშენში ყველა მომხმარებლისთვის</span></span></li>
+      </ul>
+
+      <div class="wallets">
+        <div class="wallet">
+          <div class="wal-ic btc">₿</div>
+          <div class="wal-info"><b>Bitcoin (BTC)</b><div class="wal-addr" id="addr-btc">bc1qly65zeqwuu9jppevgn50pev4588h8kpf2ltx6d</div></div>
+          <button class="copy-btn" data-copy="addr-btc"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+        </div>
+        <div class="wallet">
+          <div class="wal-ic eth">Ξ</div>
+          <div class="wal-info"><b>Ethereum (ERC-20)</b><div class="wal-addr" id="addr-eth">0xc7345AA7E3aaC0F5bB11B3Add06647E717BD5730</div></div>
+          <button class="copy-btn" data-copy="addr-eth"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+        </div>
+        <div class="wallet">
+          <div class="wal-ic usdt">$</div>
+          <div class="wal-info"><b>USDT (TRC-20)</b><div class="wal-addr" id="addr-usdt">TREv4WVifxdqMgmpJbrvJBBf8Q8h3vFbsa</div></div>
+          <button class="copy-btn" data-copy="addr-usdt"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+        </div>
+        <div class="wallet">
+          <div class="wal-ic ton">T</div>
+          <div class="wal-info"><b>TON</b><div class="wal-addr" id="addr-ton">UQDrQAmZBtfPeC7Vjqkrb7SMdmxJ2py02MOCzLIQJjdjrZ2O</div></div>
+          <button class="copy-btn" data-copy="addr-ton"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+        </div>
       </div>
-      <div class="wallet">
-        <div class="wal-ic eth">Ξ</div>
-        <div class="wal-info"><b>Ethereum (ERC-20)</b><div class="wal-addr" id="addr-eth">0xc7345AA7E3aaC0F5bB11B3Add06647E717BD5730</div></div>
-        <button class="copy-btn" data-copy="addr-eth"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+    </div>
+
+    <!-- ===== SECTION 2: INVEST ===== -->
+    <div class="ps-section s-invest">
+      <h3 class="ps-h"><span class="ps-num">02</span>
+        <span data-lang="ru" data-nosnippet>Инвесторам</span>
+        <span data-lang="en" class="show">For investors</span>
+        <span data-lang="ge" data-nosnippet>ინვესტორებისთვის</span>
+      </h3>
+      <p>
+        <span data-lang="ru" data-nosnippet>Открыт <strong>pre-seed: $150–200k SAFE</strong> на 3-месячный спринт. Жёсткая SAFE-структура, прозрачный план расходов, фаундер сидит на стипендии до закрытия seed.</span>
+        <span data-lang="en" class="show">Pre-seed is open: <strong>$150–200k SAFE</strong> for a 3-month sprint. Standard SAFE terms, transparent burn plan, founder on a token stipend until seed closes.</span>
+        <span data-lang="ge" data-nosnippet>ღიაა <strong>pre-seed: $150–200k SAFE</strong> 3-თვიანი სპრინტისთვის. სტანდარტული SAFE-პირობები, გამჭვირვალე ხარჯვის გეგმა, დამფუძნებელი მინიმალურ სტიპენდიაზე seed-მდე.</span>
+      </p>
+      <p>
+        <span data-lang="ru" data-nosnippet>Результат через 3 месяца: нативные iOS + Android в сторах, <strong>10 000+ пользователей</strong>, первый B2G-пилот с грузинским МЧС, MRR $3–5k+. Целевой seed-раунд $500k–1M через 4–6 месяцев.</span>
+        <span data-lang="en" class="show">Outcome in 3 months: native iOS + Android in stores, <strong>10,000+ users</strong>, first B2G pilot signed with Georgian emergency services, MRR $3–5k+. Target seed round $500k–1M in 4–6 months.</span>
+        <span data-lang="ge" data-nosnippet>შედეგი 3 თვეში: ნატივი iOS + Android მაღაზიებში, <strong>10 000+ მომხმარებელი</strong>, პირველი B2G-პილოტი საქართველოს გადაუდებელ სამსახურებთან, MRR $3–5k+. სამიზნე seed-რაუნდი $500k–1M 4–6 თვეში.</span>
+      </p>
+      <p>
+        <span data-lang="ru" data-nosnippet>В диалоге с Vesna Capital (Ross Yomutbayev) и Nova Venture (Giuseppe Chiellino, Nicola Verzura). Открыты к ангелам, микрофондам и стратегам в emergency-tech / safety-SaaS.</span>
+        <span data-lang="en" class="show">In conversation with Vesna Capital (Ross Yomutbayev) and Nova Venture (Giuseppe Chiellino, Nicola Verzura). Open to angels, micro-funds and strategics in emergency-tech / safety-SaaS.</span>
+        <span data-lang="ge" data-nosnippet>მიმოწერა Vesna Capital-სა (Ross Yomutbayev) და Nova Venture-თან (Giuseppe Chiellino, Nicola Verzura). ღია ანგელოზებისთვის, მიკრო-ფონდებისა და სტრატეგებისთვის emergency-tech / safety-SaaS სფეროდან.</span>
+      </p>
+      <div class="links-row">
+        <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Запросить deck → @DH_UK_Admin</span>
+          <span data-lang="en" class="show">Request the deck → @DH_UK_Admin</span>
+          <span data-lang="ge" data-nosnippet>მოითხოვე deck → @DH_UK_Admin</span>
+        </a>
       </div>
-      <div class="wallet">
-        <div class="wal-ic usdt">$</div>
-        <div class="wal-info"><b>USDT (TRC-20)</b><div class="wal-addr" id="addr-usdt">TREv4WVifxdqMgmpJbrvJBBf8Q8h3vFbsa</div></div>
-        <button class="copy-btn" data-copy="addr-usdt"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
-      </div>
-      <div class="wallet">
-        <div class="wal-ic ton">T</div>
-        <div class="wal-info"><b>TON</b><div class="wal-addr" id="addr-ton">UQDrQAmZBtfPeC7Vjqkrb7SMdmxJ2py02MOCzLIQJjdjrZ2O</div></div>
-        <button class="copy-btn" data-copy="addr-ton"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
+    </div>
+
+    <!-- ===== SECTION 3: MEDIA & CREATORS ===== -->
+    <div class="ps-section s-media">
+      <h3 class="ps-h"><span class="ps-num">03</span>
+        <span data-lang="ru" data-nosnippet>Медиа, блогерам, лидерам мнений</span>
+        <span data-lang="en" class="show">Media, creators, influencers</span>
+        <span data-lang="ge" data-nosnippet>მედია, კრეატორები, გავლენიანი პირები</span>
+      </h3>
+      <p>
+        <span data-lang="ru" data-nosnippet>История, которая работает: соло-фаундер из Украины, переехавший в Грузию во время войны, в одиночку строит safety-tech, способный изменить как работают экстренные службы в регионе — и раздаёт его бесплатно семьям с детьми и пожилыми.</span>
+        <span data-lang="en" class="show">The story that resonates: a solo founder from Ukraine, displaced to Georgia during the war, building safety tech that could change how emergency response works in the region — and giving it away free to families with kids and the elderly.</span>
+        <span data-lang="ge" data-nosnippet>ისტორია, რომელიც გადასცემს: ერთი დამფუძნებელი უკრაინიდან, რომელიც ომის დროს გადავიდა საქართველოში, ერთპიროვნულად ქმნის safety-tech-ს, რომელმაც შესაძლოა შეცვალოს რეგიონში გადაუდებელი დახმარების მუშაობა — და ბავშვებიან ოჯახებსა და ხანდაზმულებს უფასოდ აძლევს.</span>
+      </p>
+      <p>
+        <span data-lang="ru" data-nosnippet>Пресс-кит, эксклюзивное интервью, кейсы, скриншоты в высоком разрешении, видео-демо — всё по запросу. Готов к коллаборациям с тревел-, хайкинг-, parenting- и tech-инфлюенсерами.</span>
+        <span data-lang="en" class="show">Press kit, exclusive interview, case studies, high-res screenshots, video demo — all on request. Open to collaborations with travel, hiking, parenting, and tech creators.</span>
+        <span data-lang="ge" data-nosnippet>პრესა-კიტი, ექსკლუზიური ინტერვიუ, ქეისები, მაღალი გარჩევადობის სკრინშოტები, ვიდეო-დემო — ყველაფერი მოთხოვნით. ღია ვართ კოლაბორაციებისთვის ტრეველ-, ლაშქრობის-, აღზრდის- და ტექ-კრეატორებთან.</span>
+      </p>
+      <div class="links-row">
+        <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Связаться с фаундером → @DH_UK_Admin</span>
+          <span data-lang="en" class="show">Reach the founder → @DH_UK_Admin</span>
+          <span data-lang="ge" data-nosnippet>დაუკავშირდი დამფუძნებელს → @DH_UK_Admin</span>
+        </a>
+        <a class="lnk-btn ghost" href="https://t.me/uk_update" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Канал @uk_update</span>
+          <span data-lang="en" class="show">Channel @uk_update</span>
+          <span data-lang="ge" data-nosnippet>არხი @uk_update</span>
+        </a>
       </div>
     </div>
 
@@ -898,38 +1019,4 @@
     var name = s.getAttribute('data-panel');
     s.addEventListener('click', function(){ openPanel(name); });
     s.addEventListener('mouseenter', function(){ if(wheelWrap) wheelWrap.classList.add('h-' + name); });
-    s.addEventListener('mouseleave', function(){ if(wheelWrap) wheelWrap.classList.remove('h-' + name); });
-  });
-  document.querySelectorAll('[data-close]').forEach(function(c){
-    c.addEventListener('click', closePanels);
-  });
-  backdrop.addEventListener('click', closePanels);
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && dismissed) closePanels();
-  });
-
-  // ---------- COPY CRYPTO ----------
-  document.querySelectorAll('.copy-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var id = btn.getAttribute('data-copy');
-      var node = document.getElementById(id);
-      var text = node ? node.textContent.trim() : '';
-      try{
-        if(navigator.clipboard){ navigator.clipboard.writeText(text); }
-        else{
-          var ta = document.createElement('textarea');
-          ta.value = text; document.body.appendChild(ta); ta.select();
-          document.execCommand('copy'); document.body.removeChild(ta);
-        }
-      }catch(e){}
-      var original = btn.innerHTML;
-      btn.classList.add('copied');
-      btn.textContent = '✓';
-      setTimeout(function(){ btn.classList.remove('copied'); btn.innerHTML = original; setLang(current); }, 1200);
-    });
-  });
-</script>
-
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    s.addEventListener('mouseleave', function
