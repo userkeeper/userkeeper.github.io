@@ -356,8 +356,30 @@
     font-size:12px;font-weight:800;flex-shrink:0;
   }
   .ps-section.s-donate  .ps-num{background:rgba(255,138,28,.18);color:#ffa54a}
+  .ps-section.s-sponsor .ps-num{background:rgba(255,200,40,.20);color:#ffd166}
   .ps-section.s-invest  .ps-num{background:rgba(255,59,48,.18);color:#ff8e85}
   .ps-section.s-media   .ps-num{background:rgba(59,130,246,.18);color:#80b3ff}
+
+  /* sponsor tiers */
+  .tiers{list-style:none;padding:0;margin:14px 0 18px;display:flex;flex-direction:column;gap:8px}
+  .tiers li{
+    padding:12px 14px;background:rgba(255,255,255,.03);
+    border:1px solid var(--line);border-radius:10px;
+    color:#cfd5dc;
+    display:flex;gap:14px;align-items:flex-start;
+  }
+  .tiers li.tier-top{
+    background:linear-gradient(135deg,rgba(255,200,40,.10),rgba(255,138,28,.06));
+    border-color:rgba(255,200,40,.32);
+  }
+  .tiers li > b{
+    color:#fff;font-weight:800;min-width:92px;
+    font-variant-numeric:tabular-nums;font-size:14.5px;
+    padding-top:1px;
+  }
+  .tiers li > div{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+  .tier-name{color:#fff;font-weight:700;font-size:13.5px}
+  .tier-desc{color:var(--muted);font-size:12.5px;line-height:1.45}
   .ps-section p{margin:0 0 12px}
   .ps-section p:last-child{margin-bottom:0}
 
@@ -858,54 +880,31 @@
       </div>
     </div>
 
-    <!-- ===== SECTION 2: INVEST ===== -->
-    <div class="ps-section s-invest">
+    <!-- ===== SECTION 2: SPONSOR WALL ===== -->
+    <div class="ps-section s-sponsor">
       <h3 class="ps-h"><span class="ps-num">02</span>
-        <span data-lang="ru" data-nosnippet>Инвесторам</span>
-        <span data-lang="en" class="show">For investors</span>
-        <span data-lang="ge" data-nosnippet>ინვესტორებისთვის</span>
+        <span data-lang="ru" data-nosnippet>Стена спонсоров</span>
+        <span data-lang="en" class="show">Sponsor wall</span>
+        <span data-lang="ge" data-nosnippet>სპონსორთა კედელი</span>
       </h3>
       <p>
-        <span data-lang="ru" data-nosnippet>Открыт <strong>pre-seed: $150–200k SAFE</strong> на 3-месячный спринт. Жёсткая SAFE-структура, прозрачный план расходов, фаундер сидит на стипендии до закрытия seed.</span>
-        <span data-lang="en" class="show">Pre-seed is open: <strong>$150–200k SAFE</strong> for a 3-month sprint. Standard SAFE terms, transparent burn plan, founder on a token stipend until seed closes.</span>
-        <span data-lang="ge" data-nosnippet>ღიაა <strong>pre-seed: $150–200k SAFE</strong> 3-თვიანი სპრინტისთვის. სტანდარტული SAFE-პირობები, გამჭვირვალე ხარჯვის გეგმა, დამფუძნებელი მინიმალურ სტიპენდიაზე seed-მდე.</span>
+        <span data-lang="ru" data-nosnippet>Чёрное пространство вокруг SOS-кнопки — не фон. Это <strong>стена</strong>. Бренды, которые помогают строить UserKeeper, получают своё лого там, рядом с экраном, который люди открывают <em>именно в момент, когда нужна помощь</em>.</span>
+        <span data-lang="en" class="show">The black space around the SOS button isn't decoration — it's a <strong>wall</strong>. Brands that help build UserKeeper get their logo placed there, right next to the screen people open <em>at the exact moment they need help</em>.</span>
+        <span data-lang="ge" data-nosnippet>შავი სივრცე SOS-ღილაკის გარშემო ფონი არ არის — ეს <strong>კედელია</strong>. ბრენდები, რომლებიც UserKeeper-ის შენებას ეხმარებიან, თავიანთ ლოგოს იქ ათავსებენ, იმ ეკრანის გვერდით, რომელსაც ხალხი <em>ზუსტად მაშინ ხსნის, როცა დახმარება სჭირდებათ</em>.</span>
       </p>
       <p>
-        <span data-lang="ru" data-nosnippet>Результат через 3 месяца: нативные iOS + Android в сторах, <strong>10 000+ пользователей</strong>, первый B2G-пилот с грузинским МЧС, MRR $3–5k+. Целевой seed-раунд $500k–1M через 4–6 месяцев.</span>
-        <span data-lang="en" class="show">Outcome in 3 months: native iOS + Android in stores, <strong>10,000+ users</strong>, first B2G pilot signed with Georgian emergency services, MRR $3–5k+. Target seed round $500k–1M in 4–6 months.</span>
-        <span data-lang="ge" data-nosnippet>შედეგი 3 თვეში: ნატივი iOS + Android მაღაზიებში, <strong>10 000+ მომხმარებელი</strong>, პირველი B2G-პილოტი საქართველოს გადაუდებელ სამსახურებთან, MRR $3–5k+. სამიზნე seed-რაუნდი $500k–1M 4–6 თვეში.</span>
+        <span data-lang="ru" data-nosnippet><strong>Минимум $50.</strong> Чем больше донат — тем больше лого. Без жёстких уровней, размер подбираем пропорционально вкладу.</span>
+        <span data-lang="en" class="show"><strong>Minimum $50.</strong> Bigger donation, bigger logo. No rigid tiers — size scales proportionally to your contribution.</span>
+        <span data-lang="ge" data-nosnippet><strong>მინიმუმი $50.</strong> რაც დიდია დონაცია, მით დიდია ლოგო. ხისტი დონეების გარეშე — ზომა პროპორციულად შენი წვლილისა.</span>
       </p>
       <p>
-        <span data-lang="ru" data-nosnippet>В диалоге с Vesna Capital (Ross Yomutbayev) и Nova Venture (Giuseppe Chiellino, Nicola Verzura). Открыты к ангелам, микрофондам и стратегам в emergency-tech / safety-SaaS.</span>
-        <span data-lang="en" class="show">In conversation with Vesna Capital (Ross Yomutbayev) and Nova Venture (Giuseppe Chiellino, Nicola Verzura). Open to angels, micro-funds and strategics in emergency-tech / safety-SaaS.</span>
-        <span data-lang="ge" data-nosnippet>მიმოწერა Vesna Capital-სა (Ross Yomutbayev) და Nova Venture-თან (Giuseppe Chiellino, Nicola Verzura). ღია ანგელოზებისთვის, მიკრო-ფონდებისა და სტრატეგებისთვის emergency-tech / safety-SaaS სფეროდან.</span>
+        <span data-lang="ru" data-nosnippet><strong>Как стать спонсором:</strong> донат на любой адрес выше → пиши в @DH_UK_Admin лого (SVG/PNG), ссылку, название бренда и хеш транзакции. На стене в течение 48 часов.</span>
+        <span data-lang="en" class="show"><strong>How to apply:</strong> donate to any address above → send your logo (SVG/PNG), link, brand name and tx hash to @DH_UK_Admin. On the wall within 48 hours.</span>
+        <span data-lang="ge" data-nosnippet><strong>როგორ გახდე სპონსორი:</strong> დონაცია ნებისმიერ ზემოთ მისამართზე → გაუგზავნე ლოგო (SVG/PNG), ბმული, ბრენდის სახელი და tx-ჰეში @DH_UK_Admin-ს. კედელზე 48 საათში.</span>
       </p>
       <div class="links-row">
         <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-          <span data-lang="ru" data-nosnippet>Запросить deck → @DH_UK_Admin</span>
-          <span data-lang="en" class="show">Request the deck → @DH_UK_Admin</span>
-          <span data-lang="ge" data-nosnippet>მოითხოვე deck → @DH_UK_Admin</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- ===== SECTION 3: MEDIA & CREATORS ===== -->
-    <div class="ps-section s-media">
-      <h3 class="ps-h"><span class="ps-num">03</span>
-        <span data-lang="ru" data-nosnippet>Медиа, блогерам, лидерам мнений</span>
-        <span data-lang="en" class="show">Media, creators, influencers</span>
-        <span data-lang="ge" data-nosnippet>მედია, კრეატორები, გავლენიანი პირები</span>
-      </h3>
-      <p>
-        <span data-lang="ru" data-nosnippet>История, которая работает: соло-фаундер из Украины, переехавший в Грузию во время войны, в одиночку строит safety-tech, способный изменить как работают экстренные службы в регионе — и раздаёт его бесплатно семьям с детьми и пожилыми.</span>
-        <span data-lang="en" class="show">The story that resonates: a solo founder from Ukraine, displaced to Georgia during the war, building safety tech that could change how emergency response works in the region — and giving it away free to families with kids and the elderly.</span>
-        <span data-lang="ge" data-nosnippet>ისტორია, რომელიც გადასცემს: ერთი დამფუძნებელი უკრაინიდან, რომელიც ომის დროს გადავიდა საქართველოში, ერთპიროვნულად ქმნის safety-tech-ს, რომელმაც შესაძლოა შეცვალოს რეგიონში გადაუდებელი დახმარების მუშაობა — და ბავშვებიან ოჯახებსა და ხანდაზმულებს უფასოდ აძლევს.</span>
-      </p>
-      <p>
-        <span data-lang="ru" data-nosnippet>Пресс-кит, эксклюзивное интервью, кейсы, скриншоты в высоком разрешении, видео-демо — всё по запросу. Готов к коллаборациям с тревел-, хайкинг-, parenting- и tech-инфлюенсерами.</span>
-        <span data-lang="en" class="show">Press kit, exclusive interview, case studies, high-res screenshots, video demo — all on request. Open to collaborations with travel, hiking, parenting, and tech creators.</span>
-        <span data-lang="ge" data-nosnippet>პრესა-კიტი, ექსკლუზიური ინტერვიუ, ქეისები, მაღალი გარჩევადობის სკრინშოტები, ვიდეო-დემო — ყველაფერი მოთხოვნით. ღია ვართ კოლაბორაციებისთვის ტრეველ-, ლაშქრობის-, აღზრდის- და ტექ-კრეატორებთან.</span>
-      </p>
+          <span data-lang="ru" data-nosnippet>Стать спонсором → @DH_UK_Admin</span>
       <div class="links-row">
         <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
           <span data-lang="ru" data-nosnippet>Связаться с фаундером → @DH_UK_Admin</span>
@@ -941,30 +940,7 @@
 </div>
 
 <script>
-  // ---------- LANGUAGE ----------
-  var current = 'en';
-  try{
-    var urlLang = new URLSearchParams(location.search).get('lang');
-    if(urlLang && /^(en|ru|ge|ka)$/.test(urlLang)) current = urlLang === 'ka' ? 'ge' : urlLang;
-    else current = localStorage.getItem('uk_lang') || 'en';
-  }catch(e){}
-  function setLang(code){
-    current = code;
-    try{ localStorage.setItem('uk_lang', code) }catch(e){}
-    document.documentElement.setAttribute('lang', code);
-    document.querySelectorAll('[data-lang]').forEach(function(el){
-      el.classList.toggle('show', el.getAttribute('data-lang') === code);
-    });
-    document.querySelectorAll('#lang button').forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-set') === code);
-    });
-  }
-  document.querySelectorAll('#lang button').forEach(function(b){
-    b.addEventListener('click', function(e){ e.stopPropagation(); setLang(b.getAttribute('data-set')); });
-  });
-  setLang(current);
-
-  // ---------- SPLASH ----------
+  // ---------- SPLASH (set up FIRST so nothing below can block it) ----------
   var splash = document.getElementById('splash');
   var app = document.getElementById('app');
   var counterEl = document.getElementById('counter');
@@ -975,48 +951,120 @@
   function dismissSplash(){
     if(dismissed) return;
     dismissed = true;
-    clearInterval(tickInt);
-    splash.classList.add('gone');
-    app.removeAttribute('aria-hidden');
-    requestAnimationFrame(function(){ app.classList.add('ready'); });
-    setTimeout(function(){ splash.style.display='none'; }, 1300);
+    try{ clearInterval(tickInt); }catch(e){}
+    try{ if(splash) splash.classList.add('gone'); }catch(e){}
+    try{ if(app) app.removeAttribute('aria-hidden'); }catch(e){}
+    try{ requestAnimationFrame(function(){ if(app) app.classList.add('ready'); }); }catch(e){ if(app) app.classList.add('ready'); }
+    setTimeout(function(){ try{ if(splash) splash.style.display='none'; }catch(e){} }, 1300);
   }
 
-  // tap or key
-  splash.addEventListener('click', dismissSplash);
-  splash.addEventListener('touchend', function(e){ e.preventDefault(); dismissSplash(); }, {passive:false});
+  if(splash){
+    splash.addEventListener('click', dismissSplash);
+    splash.addEventListener('touchend', function(e){ try{ e.preventDefault(); }catch(_){} dismissSplash(); }, {passive:false});
+    splash.addEventListener('pointerdown', dismissSplash);
+  }
   document.addEventListener('keydown', function(e){
     if(!dismissed && (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape')) dismissSplash();
   });
+  try{
+    tickInt = setInterval(function(){
+      seconds -= 1;
+      if(counterEl) counterEl.textContent = seconds;
+      if(seconds <= 0){ dismissSplash(); }
+    }, 1000);
+  }catch(e){ setTimeout(dismissSplash, 10000); }
 
-  // 10-sec auto countdown
-  tickInt = setInterval(function(){
-    seconds -= 1;
-    if(counterEl) counterEl.textContent = seconds;
-    if(seconds <= 0){ dismissSplash(); }
-  }, 1000);
+  // failsafe: dismiss after 11s no matter what
+  setTimeout(function(){ if(!dismissed) dismissSplash(); }, 11000);
+
+  // ---------- LANGUAGE ----------
+  var current = 'en';
+  try{
+    var urlLang = new URLSearchParams(location.search).get('lang');
+    if(urlLang && /^(en|ru|ge|ka)$/.test(urlLang)) current = urlLang === 'ka' ? 'ge' : urlLang;
+    else current = localStorage.getItem('uk_lang') || 'en';
+  }catch(e){}
+  function setLang(code){
+    try{
+      current = code;
+      try{ localStorage.setItem('uk_lang', code); }catch(e){}
+      document.documentElement.setAttribute('lang', code);
+      document.querySelectorAll('[data-lang]').forEach(function(el){
+        el.classList.toggle('show', el.getAttribute('data-lang') === code);
+      });
+      document.querySelectorAll('#lang button').forEach(function(b){
+        b.classList.toggle('active', b.getAttribute('data-set') === code);
+      });
+    }catch(e){}
+  }
+  try{
+    document.querySelectorAll('#lang button').forEach(function(b){
+      b.addEventListener('click', function(e){ e.stopPropagation(); setLang(b.getAttribute('data-set')); });
+    });
+    setLang(current);
+  }catch(e){}
 
   // ---------- PANELS ----------
-  var backdrop = document.getElementById('backdrop');
-  var panels = {
-    about: document.getElementById('p-about'),
-    roadmap: document.getElementById('p-roadmap'),
-    support: document.getElementById('p-support')
-  };
-  function openPanel(name){
-    var p = panels[name]; if(!p) return;
-    Object.values(panels).forEach(function(x){ x.classList.remove('open'); });
-    p.classList.add('open');
-    backdrop.classList.add('open');
-    p.scrollTop = 0;
-  }
-  function closePanels(){
-    Object.values(panels).forEach(function(x){ x.classList.remove('open'); });
-    backdrop.classList.remove('open');
-  }
-  var wheelWrap = document.querySelector('.wheel-wrap');
-  document.querySelectorAll('.sector').forEach(function(s){
-    var name = s.getAttribute('data-panel');
-    s.addEventListener('click', function(){ openPanel(name); });
-    s.addEventListener('mouseenter', function(){ if(wheelWrap) wheelWrap.classList.add('h-' + name); });
-    s.addEventListener('mouseleave', function
+  try{
+    var backdrop = document.getElementById('backdrop');
+    var panels = {
+      about:   document.getElementById('p-about'),
+      roadmap: document.getElementById('p-roadmap'),
+      support: document.getElementById('p-support')
+    };
+    function panelsList(){
+      return [panels.about, panels.roadmap, panels.support].filter(function(x){return !!x;});
+    }
+    function openPanel(name){
+      var p = panels[name]; if(!p) return;
+      panelsList().forEach(function(x){ x.classList.remove('open'); });
+      p.classList.add('open');
+      if(backdrop) backdrop.classList.add('open');
+      p.scrollTop = 0;
+    }
+    function closePanels(){
+      panelsList().forEach(function(x){ x.classList.remove('open'); });
+      if(backdrop) backdrop.classList.remove('open');
+    }
+    var wheelWrap = document.querySelector('.wheel-wrap');
+    document.querySelectorAll('.sector').forEach(function(s){
+      var name = s.getAttribute('data-panel');
+      s.addEventListener('click', function(){ openPanel(name); });
+      s.addEventListener('mouseenter', function(){ if(wheelWrap) wheelWrap.classList.add('h-' + name); });
+      s.addEventListener('mouseleave', function(){ if(wheelWrap) wheelWrap.classList.remove('h-' + name); });
+    });
+    document.querySelectorAll('[data-close]').forEach(function(c){
+      c.addEventListener('click', closePanels);
+    });
+    if(backdrop) backdrop.addEventListener('click', closePanels);
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && dismissed) closePanels();
+    });
+  }catch(e){}
+
+  // ---------- COPY CRYPTO ----------
+  try{
+    document.querySelectorAll('.copy-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-copy');
+        var node = document.getElementById(id);
+        var text = node ? node.textContent.trim() : '';
+        try{
+          if(navigator.clipboard){ navigator.clipboard.writeText(text); }
+          else{
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            document.execCommand('copy'); document.body.removeChild(ta);
+          }
+        }catch(e){}
+        var original = btn.innerHTML;
+        btn.classList.add('copied');
+        btn.textContent = '✓';
+        setTimeout(function(){ btn.classList.remove('copied'); btn.innerHTML = original; setLang(current); }, 1200);
+      });
+    });
+  }catch(e){}
+</script>
+
+</body>
+</html>
