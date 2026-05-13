@@ -420,11 +420,11 @@
     display:flex;align-items:center;gap:12px;padding:14px 16px;
     background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:12px;
   }
-  .wal-ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff;flex-shrink:0}
-  .wal-ic.btc{background:#f7931a}.wal-ic.eth{background:#627eea}.wal-ic.usdt{background:#26a17b}.wal-ic.ton{background:#0098ea}
+  .wal-ic{width:38px;height:38px;flex-shrink:0;display:grid;place-items:center}
+  .wal-ic svg{width:38px;height:38px;display:block;border-radius:50%}
   .wal-info{flex:1;min-width:0}
-  .wal-info b{display:block;font-size:13.5px;margin-bottom:2px}
-  .wal-addr{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .wal-info b{display:block;font-size:14px;color:#fff}
+  .wal-addr{display:none}
   .copy-btn{background:#1c2128;border:1px solid var(--line);color:var(--muted);padding:7px 11px;border-radius:8px;font-size:11.5px;font-weight:700;transition:all .15s;flex-shrink:0}
   .copy-btn:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
   .copy-btn.copied{background:#22c55e;color:#fff;border-color:#22c55e}
@@ -519,6 +519,30 @@
       <path d="M7.8 16.2 A6 6 0 0 1 7.8 7.8"/>
       <path d="M19 5 A10 10 0 0 1 19 19"/>
       <path d="M5 19 A10 10 0 0 1 5 5"/>
+    </symbol>
+    <!-- Crypto logos -->
+    <symbol id="i-btc" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#F7931A"/>
+      <path fill="#FFF" d="M22.04 14.4c.29-1.93-1.18-2.97-3.18-3.67l.65-2.6-1.58-.4-.63 2.54c-.42-.1-.85-.2-1.27-.3l.64-2.55-1.58-.4-.65 2.6c-.34-.08-.67-.16-1-.24l-2.18-.55-.42 1.68s1.18.27 1.15.29c.64.16.76.59.74.93l-1.79 7.18c-.08.2-.28.49-.74.38.02.02-1.16-.29-1.16-.29l-.78 1.81 2.06.51c.38.1.76.2 1.13.3l-.66 2.63 1.58.4.65-2.6c.43.12.85.22 1.26.32l-.65 2.59 1.58.4.66-2.63c2.69.51 4.71.31 5.57-2.12.69-1.96-.03-3.09-1.46-3.83 1.04-.24 1.81-.93 2.02-2.35zM18.78 19.85c-.49 1.97-3.81.91-4.88.64l.86-3.48c1.07.27 4.53.81 4.02 2.84zm.49-5.13c-.45 1.79-3.21.88-4.1.66l.78-3.16c.89.22 3.79.64 3.32 2.5z"/>
+    </symbol>
+    <symbol id="i-eth" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#627EEA"/>
+      <g fill="#FFF" fill-rule="nonzero">
+        <path fill-opacity=".602" d="M16.498 4v8.87l7.497 3.35z"/>
+        <path d="M16.498 4 9 16.22l7.498-3.35z"/>
+        <path fill-opacity=".602" d="M16.498 21.968v6.027L24 17.616z"/>
+        <path d="M16.498 27.995v-6.028L9 17.616z"/>
+        <path fill-opacity=".2" d="m16.498 20.573 7.497-4.353-7.497-3.348z"/>
+        <path fill-opacity=".602" d="m9 16.22 7.498 4.353v-7.701z"/>
+      </g>
+    </symbol>
+    <symbol id="i-usdt" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#26A17B"/>
+      <path fill="#FFF" d="M17.92 14.46v-2.16h4.94V9.01H9.16v3.29h4.94v2.16c-4.01.18-7.03.98-7.03 1.93s3.02 1.75 7.03 1.94v6.93h3.82v-6.93c4.01-.19 7.02-.99 7.02-1.93s-3.01-1.74-7.02-1.93zm0 3.27v0c-.1.01-.62.04-1.78.04-.93 0-1.58-.03-1.81-.04v0c-3.57-.16-6.23-.78-6.23-1.52s2.66-1.36 6.23-1.52v2.42c.23.02.9.06 1.83.06 1.11 0 1.66-.05 1.76-.06v-2.42c3.56.16 6.21.78 6.21 1.52s-2.66 1.36-6.21 1.52z"/>
+    </symbol>
+    <symbol id="i-ton" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="16" fill="#0098EA"/>
+      <path fill="#FFF" d="M21.4 9H10.6c-1.98 0-3.24 2.14-2.25 3.87l6.78 11.74c.43.75 1.51.75 1.94 0l6.78-11.74C24.84 11.14 23.39 9 21.4 9zM15.13 21.21l-1.48-2.86-3.56-6.37c-.23-.4.05-.91.52-.91h4.52v10.14zm6.79-9.23-3.56 6.37-1.48 2.86V11.07h4.52c.47 0 .75.51.52.91z"/>
     </symbol>
   </defs>
 </svg>
@@ -855,25 +879,24 @@
         <li><b>$200</b><span><span data-lang="ru" data-nosnippet>= неделя серверов, базы и API</span><span data-lang="en" class="show">= a week of servers, database and API</span><span data-lang="ge" data-nosnippet>= კვირა სერვერები, ბაზა და API</span></span></li>
         <li><b>$2 000</b><span><span data-lang="ru" data-nosnippet>= одна готовая фича в проде для всех пользователей</span><span data-lang="en" class="show">= one complete feature shipped to all users</span><span data-lang="ge" data-nosnippet>= ერთი მზა ფიჩა პროდუქშენში ყველა მომხმარებლისთვის</span></span></li>
       </ul>
-
       <div class="wallets">
         <div class="wallet">
-          <div class="wal-ic btc">₿</div>
+          <div class="wal-ic"><svg><use href="#i-btc"/></svg></div>
           <div class="wal-info"><b>Bitcoin (BTC)</b><div class="wal-addr" id="addr-btc">bc1qly65zeqwuu9jppevgn50pev4588h8kpf2ltx6d</div></div>
           <button class="copy-btn" data-copy="addr-btc"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
         </div>
         <div class="wallet">
-          <div class="wal-ic eth">Ξ</div>
+          <div class="wal-ic"><svg><use href="#i-eth"/></svg></div>
           <div class="wal-info"><b>Ethereum (ERC-20)</b><div class="wal-addr" id="addr-eth">0xc7345AA7E3aaC0F5bB11B3Add06647E717BD5730</div></div>
           <button class="copy-btn" data-copy="addr-eth"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
         </div>
         <div class="wallet">
-          <div class="wal-ic usdt">$</div>
+          <div class="wal-ic"><svg><use href="#i-usdt"/></svg></div>
           <div class="wal-info"><b>USDT (TRC-20)</b><div class="wal-addr" id="addr-usdt">TREv4WVifxdqMgmpJbrvJBBf8Q8h3vFbsa</div></div>
           <button class="copy-btn" data-copy="addr-usdt"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
         </div>
         <div class="wallet">
-          <div class="wal-ic ton">T</div>
+          <div class="wal-ic"><svg><use href="#i-ton"/></svg></div>
           <div class="wal-info"><b>TON</b><div class="wal-addr" id="addr-ton">UQDrQAmZBtfPeC7Vjqkrb7SMdmxJ2py02MOCzLIQJjdjrZ2O</div></div>
           <button class="copy-btn" data-copy="addr-ton"><span data-lang="ru" data-nosnippet>копир.</span><span data-lang="en" class="show">copy</span><span data-lang="ge" data-nosnippet>კოპ.</span></button>
         </div>
@@ -888,14 +911,9 @@
         <span data-lang="ge" data-nosnippet>სპონსორთა კედელი</span>
       </h3>
       <p>
-        <span data-lang="ru" data-nosnippet>Чёрное пространство вокруг SOS-кнопки — не фон. Это <strong>стена</strong>. Бренды, которые помогают строить UserKeeper, получают своё лого там, рядом с экраном, который люди открывают <em>именно в момент, когда нужна помощь</em>.</span>
-        <span data-lang="en" class="show">The black space around the SOS button isn't decoration — it's a <strong>wall</strong>. Brands that help build UserKeeper get their logo placed there, right next to the screen people open <em>at the exact moment they need help</em>.</span>
-        <span data-lang="ge" data-nosnippet>შავი სივრცე SOS-ღილაკის გარშემო ფონი არ არის — ეს <strong>კედელია</strong>. ბრენდები, რომლებიც UserKeeper-ის შენებას ეხმარებიან, თავიანთ ლოგოს იქ ათავსებენ, იმ ეკრანის გვერდით, რომელსაც ხალხი <em>ზუსტად მაშინ ხსნის, როცა დახმარება სჭირდებათ</em>.</span>
-      </p>
-      <p>
-        <span data-lang="ru" data-nosnippet><strong>Минимум $50.</strong> Чем больше донат — тем больше лого. Без жёстких уровней, размер подбираем пропорционально вкладу.</span>
-        <span data-lang="en" class="show"><strong>Minimum $50.</strong> Bigger donation, bigger logo. No rigid tiers — size scales proportionally to your contribution.</span>
-        <span data-lang="ge" data-nosnippet><strong>მინიმუმი $50.</strong> რაც დიდია დონაცია, მით დიდია ლოგო. ხისტი დონეების გარეშე — ზომა პროპორციულად შენი წვლილისა.</span>
+        <span data-lang="ru" data-nosnippet>Чёрное пространство вокруг SOS-кнопки — не фон. Это <strong>стена</strong>. Бренды, которые помогают строить UserKeeper, получают своё лого там, рядом с экраном, который люди открывают <em>именно в момент, когда нужна помощь</em>. Чем больше донат — тем больше лого.</span>
+        <span data-lang="en" class="show">The black space around the SOS button isn't decoration — it's a <strong>wall</strong>. Brands that help build UserKeeper get their logo placed there, right next to the screen people open <em>at the exact moment they need help</em>. Bigger donation, bigger logo.</span>
+        <span data-lang="ge" data-nosnippet>შავი სივრცე SOS-ღილაკის გარშემო ფონი არ არის — ეს <strong>კედელია</strong>. ბრენდები, რომლებიც UserKeeper-ის შენებას ეხმარებიან, თავიანთ ლოგოს იქ ათავსებენ, იმ ეკრანის გვერდით, რომელსაც ხალხი <em>ზუსტად მაშინ ხსნის, როცა დახმარება სჭირდებათ</em>. რაც დიდია დონაცია, მით დიდია ლოგო.</span>
       </p>
       <p>
         <span data-lang="ru" data-nosnippet><strong>Как стать спонсором:</strong> донат на любой адрес выше → пиши в @DH_UK_Admin лого (SVG/PNG), ссылку, название бренда и хеш транзакции. На стене в течение 48 часов.</span>
@@ -905,16 +923,65 @@
       <div class="links-row">
         <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
           <span data-lang="ru" data-nosnippet>Стать спонсором → @DH_UK_Admin</span>
+          <span data-lang="en" class="show">Become a sponsor → @DH_UK_Admin</span>
+          <span data-lang="ge" data-nosnippet>გახდი სპონსორი → @DH_UK_Admin</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== SECTION 3: INVEST ===== -->
+    <div class="ps-section s-invest">
+      <h3 class="ps-h"><span class="ps-num">03</span>
+        <span data-lang="ru" data-nosnippet>Инвесторам</span>
+        <span data-lang="en" class="show">For investors</span>
+        <span data-lang="ge" data-nosnippet>ინვესტორებისთვის</span>
+      </h3>
+      <p>
+        <span data-lang="ru" data-nosnippet>Открыт <strong>pre-seed: $150–200k SAFE</strong> на 3-месячный спринт. Стандартные SAFE-условия, прозрачный план расходов, фаундер на минимальной стипендии до закрытия seed.</span>
+        <span data-lang="en" class="show">Pre-seed is open: <strong>$150–200k SAFE</strong> for a 3-month sprint. Standard SAFE terms, transparent burn plan, founder on a token stipend until seed closes.</span>
+        <span data-lang="ge" data-nosnippet>ღიაა <strong>pre-seed: $150–200k SAFE</strong> 3-თვიანი სპრინტისთვის. სტანდარტული SAFE-პირობები, გამჭვირვალე ხარჯვის გეგმა.</span>
+      </p>
+      <p>
+        <span data-lang="ru" data-nosnippet>Результат через 3 месяца: нативные iOS + Android в сторах, <strong>10 000+ пользователей</strong>, первый B2G-пилот с грузинским МЧС, MRR $3–5k+. Целевой seed-раунд $500k–1M через 4–6 месяцев.</span>
+        <span data-lang="en" class="show">Outcome in 3 months: native iOS + Android in stores, <strong>10,000+ users</strong>, first B2G pilot signed with Georgian emergency services, MRR $3–5k+. Target seed round $500k–1M in 4–6 months.</span>
+        <span data-lang="ge" data-nosnippet>შედეგი 3 თვეში: ნატივი iOS + Android მაღაზიებში, <strong>10 000+ მომხმარებელი</strong>, პირველი B2G-პილოტი საქართველოს გადაუდებელ სამსახურებთან, MRR $3–5k+.</span>
+      </p>
+      <p>
+        <span data-lang="ru" data-nosnippet>В диалоге с Vesna Capital (Ross Yomutbayev) и Nova Venture (Giuseppe Chiellino, Nicola Verzura). Открыты к ангелам, микрофондам и стратегам в emergency-tech / safety-SaaS.</span>
+        <span data-lang="en" class="show">In conversation with Vesna Capital (Ross Yomutbayev) and Nova Venture (Giuseppe Chiellino, Nicola Verzura). Open to angels, micro-funds and strategics in emergency-tech / safety-SaaS.</span>
+        <span data-lang="ge" data-nosnippet>მიმოწერა Vesna Capital-სა (Ross Yomutbayev) და Nova Venture-თან (Giuseppe Chiellino, Nicola Verzura). ღია ანგელოზებისთვის, მიკრო-ფონდებისა და სტრატეგებისთვის.</span>
+      </p>
+      <div class="links-row">
+        <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Запросить deck → @DH_UK_Admin</span>
+          <span data-lang="en" class="show">Request the deck → @DH_UK_Admin</span>
+          <span data-lang="ge" data-nosnippet>მოითხოვე deck → @DH_UK_Admin</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== SECTION 4: MEDIA & CREATORS ===== -->
+    <div class="ps-section s-media">
+      <h3 class="ps-h"><span class="ps-num">04</span>
+        <span data-lang="ru" data-nosnippet>Медиа, блогерам, лидерам мнений</span>
+        <span data-lang="en" class="show">Media, creators, influencers</span>
+        <span data-lang="ge" data-nosnippet>მედია, კრეატორები, გავლენიანი პირები</span>
+      </h3>
+      <p>
+        <span data-lang="ru" data-nosnippet>История, которая работает: соло-фаундер из Украины, переехавший в Грузию во время войны, в одиночку строит safety-tech, способный изменить как работают экстренные службы в регионе — и раздаёт его бесплатно семьям с детьми и пожилыми.</span>
+        <span data-lang="en" class="show">The story that resonates: a solo founder from Ukraine, displaced to Georgia during the war, building safety tech that could change how emergency response works in the region — and giving it away free to families with kids and the elderly.</span>
+        <span data-lang="ge" data-nosnippet>ისტორია, რომელიც გადასცემს: ერთი დამფუძნებელი უკრაინიდან, რომელიც ომის დროს გადავიდა საქართველოში, ერთპიროვნულად ქმნის safety-tech-ს, რომელმაც შესაძლოა შეცვალოს რეგიონში გადაუდებელი დახმარების მუშაობა — და ბავშვებიან ოჯახებსა და ხანდაზმულებს უფასოდ აძლევს.</span>
+      </p>
+      <p>
+        <span data-lang="ru" data-nosnippet>Пресс-кит, эксклюзивное интервью, кейсы, скриншоты в высоком разрешении, видео-демо — всё по запросу. Готов к коллаборациям с тревел-, хайкинг-, parenting- и tech-инфлюенсерами.</span>
+        <span data-lang="en" class="show">Press kit, exclusive interview, case studies, high-res screenshots, video demo — all on request. Open to collaborations with travel, hiking, parenting, and tech creators.</span>
+        <span data-lang="ge" data-nosnippet>პრესა-კიტი, ექსკლუზიური ინტერვიუ, ქეისები, მაღალი გარჩევადობის სკრინშოტები, ვიდეო-დემო — ყველაფერი მოთხოვნით. ღია ვართ კოლაბორაციებისთვის ტრეველ-, ლაშქრობის-, აღზრდის- და ტექ-კრეატორებთან.</span>
+      </p>
       <div class="links-row">
         <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
           <span data-lang="ru" data-nosnippet>Связаться с фаундером → @DH_UK_Admin</span>
           <span data-lang="en" class="show">Reach the founder → @DH_UK_Admin</span>
           <span data-lang="ge" data-nosnippet>დაუკავშირდი დამფუძნებელს → @DH_UK_Admin</span>
-        </a>
-        <a class="lnk-btn ghost" href="https://t.me/uk_update" target="_blank" rel="noopener">
-          <span data-lang="ru" data-nosnippet>Канал @uk_update</span>
-          <span data-lang="en" class="show">Channel @uk_update</span>
-          <span data-lang="ge" data-nosnippet>არხი @uk_update</span>
         </a>
       </div>
     </div>
@@ -924,11 +991,6 @@
         <span data-lang="ru" data-nosnippet>Прототип в Telegram →</span>
         <span data-lang="en" class="show">Prototype on Telegram →</span>
         <span data-lang="ge" data-nosnippet>პროტოტიპი Telegram-ში →</span>
-      </a>
-      <a class="lnk-btn ghost" href="https://t.me/uk_update" target="_blank" rel="noopener">
-        <span data-lang="ru" data-nosnippet>Канал в Telegram</span>
-        <span data-lang="en" class="show">Telegram channel</span>
-        <span data-lang="ge" data-nosnippet>Telegram-არხი</span>
       </a>
       <a class="lnk-btn ghost" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
         <span data-lang="ru" data-nosnippet>Связь @DH_UK_Admin</span>
