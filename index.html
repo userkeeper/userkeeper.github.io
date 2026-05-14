@@ -251,8 +251,8 @@
   .sponsor:hover{transform:translateY(-50%) scale(1.18)}
   .sponsor-tip{
     position:absolute;
-    left:calc(100% + 14px);top:50%;
-    transform:translateY(-50%) translateX(-8px);
+    right:calc(100% + 14px);top:50%;
+    transform:translateY(-50%) translateX(8px);
     width:230px;
     background:rgba(18,22,28,.97);
     border:1px solid rgba(255,255,255,.1);
@@ -276,13 +276,13 @@
     color:var(--muted);white-space:nowrap;pointer-events:none;
   }
   @media (max-width:680px){
-    .sponsor{width:50px;height:50px;left:-4%}
+    .sponsor{width:50px;height:50px;left:2%}
     .sponsor-tip{
-      left:auto;right:calc(100% + 12px);
-      transform:translateY(-50%) translateX(8px);
-      width:190px;
+      left:0;right:auto;top:calc(100% + 10px);
+      transform:translateY(8px);
+      width:min(190px,70vw);
     }
-    .sponsor:hover .sponsor-tip{transform:translateY(-50%) translateX(0)}
+    .sponsor:hover .sponsor-tip{transform:translateY(0)}
   }
 
   /* Center logo */
@@ -672,9 +672,8 @@
 
       <!-- Sponsor: DealHunter -->
       <a class="sponsor" href="https://t.me/DealH_update" target="_blank" rel="noopener" aria-label="DealHunter — sponsor">
-        <img src="dealhunter.svg" alt="DealHunter" />
+        <img src="dealhunter.png" alt="DealHunter" />
         <span class="sponsor-tip"><b>DealHunter</b> — мониторит Telegram-группы и шлёт мгновенные уведомления о новых объявлениях по твоим фильтрам</span>
-        <span class="sponsor-tag">sponsor</span>
       </a>
     </div>
 
