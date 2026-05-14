@@ -65,7 +65,7 @@
       "sameAs": [
         "https://t.me/userkeeper_bot",
         "https://t.me/uk_update",
-        "https://t.me/DH_UK_Admin"
+        "https://t.me/UKeeper_admin"
       ]
     },
     {
@@ -232,6 +232,58 @@
   .wheel-wrap.h-about   .lbl-about   {transform:translate(calc(-50% - 10px),calc(-50% - 6px))}
   .wheel-wrap.h-roadmap .lbl-roadmap {transform:translate(calc(-50% + 10px),calc(-50% - 6px))}
   .wheel-wrap.h-support .lbl-support {transform:translate(-50%,calc(-50% + 11px))}
+
+  /* Sponsor logos around the wheel */
+  .sponsor{
+    position:absolute;z-index:6;
+    width:64px;height:64px;
+    left:-13%;top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+    cursor:pointer;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1.05);
+  }
+  .sponsor img{
+    width:100%;height:100%;display:block;border-radius:50%;
+    background:#fff;
+    box-shadow:0 6px 22px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.12);
+  }
+  .sponsor:hover{transform:translateY(-50%) scale(1.18)}
+  .sponsor-tip{
+    position:absolute;
+    left:calc(100% + 14px);top:50%;
+    transform:translateY(-50%) translateX(-8px);
+    width:230px;
+    background:rgba(18,22,28,.97);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:12.5px;line-height:1.5;
+    color:#e8ecf1;
+    box-shadow:0 18px 50px rgba(0,0,0,.55);
+    opacity:0;pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease;
+  }
+  .sponsor-tip b{color:#fff;font-weight:700}
+  .sponsor:hover .sponsor-tip{
+    opacity:1;
+    transform:translateY(-50%) translateX(0);
+  }
+  .sponsor-tag{
+    position:absolute;left:50%;top:calc(100% + 6px);
+    transform:translateX(-50%);
+    font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);white-space:nowrap;pointer-events:none;
+  }
+  @media (max-width:680px){
+    .sponsor{width:50px;height:50px;left:-4%}
+    .sponsor-tip{
+      left:auto;right:calc(100% + 12px);
+      transform:translateY(-50%) translateX(8px);
+      width:190px;
+    }
+    .sponsor:hover .sponsor-tip{transform:translateY(-50%) translateX(0)}
+  }
 
   /* Center logo */
   .wheel-center{
@@ -617,6 +669,13 @@
       </span>
 
       <div class="wheel-center"><img src="logo.jpg" alt="UserKeeper"/></div>
+
+      <!-- Sponsor: DealHunter -->
+      <a class="sponsor" href="https://t.me/DealH_update" target="_blank" rel="noopener" aria-label="DealHunter — sponsor">
+        <img src="dealhunter.svg" alt="DealHunter" />
+        <span class="sponsor-tip"><b>DealHunter</b> — мониторит Telegram-группы и шлёт мгновенные уведомления о новых объявлениях по твоим фильтрам</span>
+        <span class="sponsor-tag">sponsor</span>
+      </a>
     </div>
 
     <div class="tagline">
@@ -635,9 +694,9 @@
       <svg><use href="#i-broadcast"/></svg>
       <span data-lang="ru" data-nosnippet>канал</span><span data-lang="en" class="show">channel</span><span data-lang="ge" data-nosnippet>არხი</span>
     </a>
-    <a class="ab-link" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener" aria-label="Contact author">
+    <a class="ab-link" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener" aria-label="Contact author">
       <svg><use href="#i-send"/></svg>
-      <span data-lang="ru" data-nosnippet>связь @DH_UK_Admin</span><span data-lang="en" class="show">contact @DH_UK_Admin</span><span data-lang="ge" data-nosnippet>კონტაქტი @DH_UK_Admin</span>
+      <span data-lang="ru" data-nosnippet>связь @UKeeper_admin</span><span data-lang="en" class="show">contact @UKeeper_admin</span><span data-lang="ge" data-nosnippet>კონტაქტი @UKeeper_admin</span>
     </a>
   </footer>
 </div>
@@ -731,10 +790,10 @@
         <span data-lang="en" class="show">Telegram channel</span>
         <span data-lang="ge" data-nosnippet>Telegram-არხი</span>
       </a>
-      <a class="lnk-btn ghost" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-        <span data-lang="ru" data-nosnippet>Связь @DH_UK_Admin</span>
-        <span data-lang="en" class="show">Contact @DH_UK_Admin</span>
-        <span data-lang="ge" data-nosnippet>კონტაქტი @DH_UK_Admin</span>
+      <a class="lnk-btn ghost" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener">
+        <span data-lang="ru" data-nosnippet>Связь @UKeeper_admin</span>
+        <span data-lang="en" class="show">Contact @UKeeper_admin</span>
+        <span data-lang="ge" data-nosnippet>კონტაქტი @UKeeper_admin</span>
       </a>
     </div>
   </div>
@@ -841,10 +900,10 @@
         <span data-lang="en" class="show">Telegram channel</span>
         <span data-lang="ge" data-nosnippet>Telegram-არხი</span>
       </a>
-      <a class="lnk-btn ghost" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-        <span data-lang="ru" data-nosnippet>Связь @DH_UK_Admin</span>
-        <span data-lang="en" class="show">Contact @DH_UK_Admin</span>
-        <span data-lang="ge" data-nosnippet>კონტაქტი @DH_UK_Admin</span>
+      <a class="lnk-btn ghost" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener">
+        <span data-lang="ru" data-nosnippet>Связь @UKeeper_admin</span>
+        <span data-lang="en" class="show">Contact @UKeeper_admin</span>
+        <span data-lang="ge" data-nosnippet>კონტაქტი @UKeeper_admin</span>
       </a>
     </div>
   </div>
@@ -916,15 +975,15 @@
         <span data-lang="ge" data-nosnippet>შავი სივრცე SOS-ღილაკის გარშემო ფონი არ არის — ეს <strong>კედელია</strong>. ბრენდები, რომლებიც UserKeeper-ის შენებას ეხმარებიან, თავიანთ ლოგოს იქ ათავსებენ, იმ ეკრანის გვერდით, რომელსაც ხალხი <em>ზუსტად მაშინ ხსნის, როცა დახმარება სჭირდებათ</em>. რაც დიდია დონაცია, მით დიდია ლოგო.</span>
       </p>
       <p>
-        <span data-lang="ru" data-nosnippet><strong>Как стать спонсором:</strong> донат на любой адрес выше → пиши в @DH_UK_Admin лого (SVG/PNG), ссылку, название бренда и хеш транзакции. На стене в течение 48 часов.</span>
-        <span data-lang="en" class="show"><strong>How to apply:</strong> donate to any address above → send your logo (SVG/PNG), link, brand name and tx hash to @DH_UK_Admin. On the wall within 48 hours.</span>
-        <span data-lang="ge" data-nosnippet><strong>როგორ გახდე სპონსორი:</strong> დონაცია ნებისმიერ ზემოთ მისამართზე → გაუგზავნე ლოგო (SVG/PNG), ბმული, ბრენდის სახელი და tx-ჰეში @DH_UK_Admin-ს. კედელზე 48 საათში.</span>
+        <span data-lang="ru" data-nosnippet><strong>Как стать спонсором:</strong> донат на любой адрес выше → пиши в @UKeeper_admin лого (SVG/PNG), ссылку, название бренда и хеш транзакции. На стене в течение 48 часов.</span>
+        <span data-lang="en" class="show"><strong>How to apply:</strong> donate to any address above → send your logo (SVG/PNG), link, brand name and tx hash to @UKeeper_admin. On the wall within 48 hours.</span>
+        <span data-lang="ge" data-nosnippet><strong>როგორ გახდე სპონსორი:</strong> დონაცია ნებისმიერ ზემოთ მისამართზე → გაუგზავნე ლოგო (SVG/PNG), ბმული, ბრენდის სახელი და tx-ჰეში @UKeeper_admin-ს. კედელზე 48 საათში.</span>
       </p>
       <div class="links-row">
-        <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-          <span data-lang="ru" data-nosnippet>Стать спонсором → @DH_UK_Admin</span>
-          <span data-lang="en" class="show">Become a sponsor → @DH_UK_Admin</span>
-          <span data-lang="ge" data-nosnippet>გახდი სპონსორი → @DH_UK_Admin</span>
+        <a class="lnk-btn primary" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Стать спонсором → @UKeeper_admin</span>
+          <span data-lang="en" class="show">Become a sponsor → @UKeeper_admin</span>
+          <span data-lang="ge" data-nosnippet>გახდი სპონსორი → @UKeeper_admin</span>
         </a>
       </div>
     </div>
@@ -952,10 +1011,10 @@
         <span data-lang="ge" data-nosnippet>მიმოწერა Vesna Capital-სა (Ross Yomutbayev) და Nova Venture-თან (Giuseppe Chiellino, Nicola Verzura). ღია ანგელოზებისთვის, მიკრო-ფონდებისა და სტრატეგებისთვის.</span>
       </p>
       <div class="links-row">
-        <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-          <span data-lang="ru" data-nosnippet>Запросить deck → @DH_UK_Admin</span>
-          <span data-lang="en" class="show">Request the deck → @DH_UK_Admin</span>
-          <span data-lang="ge" data-nosnippet>მოითხოვე deck → @DH_UK_Admin</span>
+        <a class="lnk-btn primary" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Запросить deck → @UKeeper_admin</span>
+          <span data-lang="en" class="show">Request the deck → @UKeeper_admin</span>
+          <span data-lang="ge" data-nosnippet>მოითხოვე deck → @UKeeper_admin</span>
         </a>
       </div>
     </div>
@@ -978,10 +1037,10 @@
         <span data-lang="ge" data-nosnippet>პრესა-კიტი, ექსკლუზიური ინტერვიუ, ქეისები, მაღალი გარჩევადობის სკრინშოტები, ვიდეო-დემო — ყველაფერი მოთხოვნით. ღია ვართ კოლაბორაციებისთვის ტრეველ-, ლაშქრობის-, აღზრდის- და ტექ-კრეატორებთან.</span>
       </p>
       <div class="links-row">
-        <a class="lnk-btn primary" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-          <span data-lang="ru" data-nosnippet>Связаться с фаундером → @DH_UK_Admin</span>
-          <span data-lang="en" class="show">Reach the founder → @DH_UK_Admin</span>
-          <span data-lang="ge" data-nosnippet>დაუკავშირდი დამფუძნებელს → @DH_UK_Admin</span>
+        <a class="lnk-btn primary" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener">
+          <span data-lang="ru" data-nosnippet>Связаться с фаундером → @UKeeper_admin</span>
+          <span data-lang="en" class="show">Reach the founder → @UKeeper_admin</span>
+          <span data-lang="ge" data-nosnippet>დაუკავშირდი დამფუძნებელს → @UKeeper_admin</span>
         </a>
       </div>
     </div>
@@ -992,10 +1051,10 @@
         <span data-lang="en" class="show">Prototype on Telegram →</span>
         <span data-lang="ge" data-nosnippet>პროტოტიპი Telegram-ში →</span>
       </a>
-      <a class="lnk-btn ghost" href="https://t.me/DH_UK_Admin" target="_blank" rel="noopener">
-        <span data-lang="ru" data-nosnippet>Связь @DH_UK_Admin</span>
-        <span data-lang="en" class="show">Contact @DH_UK_Admin</span>
-        <span data-lang="ge" data-nosnippet>კონტაქტი @DH_UK_Admin</span>
+      <a class="lnk-btn ghost" href="https://t.me/UKeeper_admin" target="_blank" rel="noopener">
+        <span data-lang="ru" data-nosnippet>Связь @UKeeper_admin</span>
+        <span data-lang="en" class="show">Contact @UKeeper_admin</span>
+        <span data-lang="ge" data-nosnippet>კონტაქტი @UKeeper_admin</span>
       </a>
     </div>
   </div>

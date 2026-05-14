@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="DealHunter">
+  <circle cx="100" cy="100" r="100" fill="#ffffff"/>
+  <!-- motion lines -->
+  <line x1="30" y1="85" x2="60" y2="85" stroke="#2d3142" stroke-width="8" stroke-linecap="round"/>
+  <line x1="26" y1="104" x2="52" y2="104" stroke="#2d3142" stroke-width="8" stroke-linecap="round"/>
+  <!-- magnifying glass handle -->
+  <line x1="136" y1="126" x2="166" y2="156" stroke="#2d3142" stroke-width="16" stroke-linecap="round"/>
+  <!-- magnifying glass ring -->
+  <circle cx="106" cy="96" r="42" fill="#ffffff" stroke="#2d3142" stroke-width="12"/>
+  <!-- paper plane (Telegram-style), blue -->
+  <path d="M80 97 L137 73 L121 124 Z" fill="#3d7ff0"/>
+  <path d="M80 97 L121 124 L107 109 Z" fill="#2c5fc4"/>
+  <path d="M107 109 L137 73 L112 101 Z" fill="#5b97ff"/>
+  <!-- notification bell badge -->
+  <circle cx="150" cy="62" r="21" fill="#3d7ff0"/>
+  <path d="M150 50 a9 9 0 0 0 -9 9 v6 l-3 4 a1.5 1.5 0 0 0 1.2 2.4 h21.6 a1.5 1.5 0 0 0 1.2 -2.4 l-3 -4 v-6 a9 9 0 0 0 -9 -9 z" fill="#ffffff"/>
+  <path d="M145.5 73.5 a4.8 4.8 0 0 0 9 0 z" fill="#ffffff"/>
+</svg>
